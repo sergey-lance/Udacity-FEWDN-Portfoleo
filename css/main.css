@@ -40,7 +40,7 @@ header h1 {
     font-weight: 400;
     text-align: right;
     font-variant: small-caps;
-    margin-left: 90px; /* for logo */
+    margin-left: 100px; /* for logo */
     line-height: 0.8em;
 }
 header h1 .big {
