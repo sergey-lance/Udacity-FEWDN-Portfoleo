@@ -1,0 +1,112 @@
+/* Layout */
+
+body {
+    font-size: 16px;
+    background: white;
+}
+#wrapper {
+    max-width: 900pt;
+    margin: 0 auto; /* center */
+    padding: 0 1em;
+}
+header {
+    min-height: 130px;
+}
+footer {
+    height: 1.5em;
+}
+
+/* Style */
+
+h1, h3, a {
+    color: #2d3c49;
+    font-family: "sans-serif";
+}
+h2 {
+    color: #7d97ad;
+    font-weight: 300;
+    padding-left: 0.5em;
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+header {
+    border-bottom: 3px solid #7d97ad;
+    background: url("../images/logo.png") no-repeat left top;
+    margin: 30px 0 30px 0;
+}
+header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: right;
+    font-variant: small-caps;
+    margin-left: 90px; /* for logo */
+    line-height: 0.8em;
+}
+header h1 .big {
+    display: block;
+    font-size: 58px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+    line-height: normal;
+}
+#mr-useless-spacefiller {
+    display: block;
+    min-height: 380px;
+    width: 100%;
+    background: url("../images/spacer.png") no-repeat center center;
+    background-size: cover; /* make the image responsive: scale on resize*/
+}
+#gallery {
+    margin-top: 60px;
+}
+#gallery article {
+    text-align: center;
+    margin: 0 0 5em 0;
+}
+#gallery article a {
+    text-decoration: none;
+}
+#gallery article .url a:hover {
+    text-decoration: underline; /* hint for user that the link is not the same as for the teaser */
+}
+#gallery article a:hover h3 {
+    color: black; /* a gentle hover effect */
+}
+#gallery h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 32px;
+    margin: 0.5em 0;
+}
+#gallery .layout {
+    display: flex; /* actually I still would rather prefer float */
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+#gallery .teaser {  /* img */ /* <- no element names near the class, huh... */
+    width: 300px;
+    height: 200px;
+}
+#gallery article {
+    min-height: 100px;
+}
+
+/* Responsiveness for the gallery */
+
+@media (max-width: 1000px) { /* two columns */
+    #gallery article {
+        min-width: 50%; /* Nice scaling with no ugly gap between two columns. */
+    }
+    #mr-useless-spacefiller {
+        min-height: 200px;
+    }
+}
+@media (max-width: 650px) { /* a single column */
+    #gallery article {
+        min-width: 100%;
+    }
+}
+
+
